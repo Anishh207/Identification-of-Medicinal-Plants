@@ -1,0 +1,40 @@
+{
+    "Aloevera": {
+      "scientific_name": "Aloe barbadensis miller",
+      "medicinal_uses": ["Heals wounds", "Reduces inflammation", "Moisturizes skin"],
+      "benefits": ["Boosts immunity", "Improves digestion"],
+      "precautions": ["Avoid during pregnancy", "Excessive use may cause diarrhea"]
+    },
+
+    "Amla": {
+    "scientific_name": "Phyllanthus emblica",
+    "medicinal_uses": [
+      "Rich source of Vitamin C, enhancing immune function",
+      "Aids in digestion and alleviates constipation",
+      "Promotes hair health and reduces hair fall"
+    ],
+    "benefits": [
+      "Improves metabolic activity",
+      "Supports heart health by managing cholesterol levels",
+      "Possesses anti-aging properties due to its antioxidant content"
+    ],
+    "precautions": [
+      "May lower blood sugar levels; diabetics should monitor accordingly",
+      "Excessive consumption might lead to acidity in sensitive individuals"
+    ]
+  },
+  
+    "Neem": {
+      "scientific_name": "Azadirachta indica",
+      "medicinal_uses": ["Treats skin disorders", "Boosts immunity", "Anti-bacterial"],
+      "benefits": ["Purifies blood", "Improves liver function"],
+      "precautions": ["May lower blood sugar too much", "Avoid during pregnancy"]
+    },
+    "Tulasi": {
+      "scientific_name": "Ocimum sanctum",
+      "medicinal_uses": ["Reduces stress", "Boosts respiratory health"],
+      "benefits": ["Supports immune function", "Good for digestion"],
+      "precautions": ["May interact with blood-thinning medications", "Excess use may lower blood sugar"]
+    }
+  }
+  

@@ -1,0 +1,29 @@
+.app {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+input, button {
+  margin: 10px;
+  padding: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #f9f9f9;
+}
+
+.result img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.flex-fill {
+  min-width: 250px; /* Ensures sections don’t collapse on smaller screens */
+}
+
