@@ -11,7 +11,7 @@ CORS(app)
 # Load the trained model
 model = tf.keras.models.load_model("Model_Mobilenet.h5")
 
-# Load class names (Make sure these match the model's classes)
+# Load class names
 class_names = [
     'Aloevera', 'Amla', 'Amruta_Balli', 'Arali', 'Ashoka', 'Ashwagandha', 
     'Avacado', 'Bamboo', 'Basale', 'Betel', 'Betel_Nut', 'Brahmi', 'Castor', 
@@ -21,12 +21,12 @@ class_names = [
     'Pomegranate', 'Raktachandini', 'Rose', 'Sapota', 'Tulasi', 'Wood_sorel'
 ]
 
-# Load plant details from JSON
+# Load plant details including locations
 with open("plant_details.json", "r") as file:
     plant_details = json.load(file)
 
 def predict_plant(img_path, model, class_names):
-    """ Predict the top 3 classes with confidence scores. """
+    """ Predict the top 3 classes with confidence scores and locations. """
     img = load_img(img_path, target_size=(224, 224))
     img_array = img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
@@ -34,17 +34,18 @@ def predict_plant(img_path, model, class_names):
     predictions = model.predict(img_array)[0]  # Extract predictions array
 
     # Get top 3 predictions
-    top_indices = np.argsort(predictions)[::-1][:3]  # Sort in descending order
+    top_indices = np.argsort(predictions)[::-1][:3]
     top_predictions = [
         {
             "plant_name": class_names[i],
-            "confidence": float(predictions[i]),  # Convert numpy float to Python float
+            "confidence": float(predictions[i]),
             **plant_details.get(class_names[i], {
                 "scientific_name": "Unknown",
                 "medicinal_uses": [],
                 "benefits": [],
-                "precautions": []
-            })  # Get plant details, default to empty if not found
+                "precautions": [],
+                "locations": []  # Default empty list if no locations found
+            })
         }
         for i in top_indices
     ]
