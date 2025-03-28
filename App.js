@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import styles from "./App.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "leaflet/dist/leaflet.css";
+import styles from "./App.module.css";
+import PlantMap from "./PlantMap"; // ✅ Import PlantMap
 
 function App() {
   const [file, setFile] = useState(null);
@@ -37,33 +39,16 @@ function App() {
 
   return (
     <div className={`container text-center ${styles.appContainer}`}>
-      <motion.div
-        className={styles.heroSection}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <motion.div className={styles.heroSection} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <h1 className={styles.title}>Medicinal Plant Identifier 🌿</h1>
         <p className={styles.subtitle}>Identify plants and discover their medicinal benefits</p>
       </motion.div>
 
-      <motion.div
-        className={`card shadow-lg p-4 ${styles.card}`}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <motion.div className={`card shadow-lg p-4 ${styles.card}`} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
         <input type="file" onChange={handleFileChange} className="form-control mb-3" />
 
         {imagePreview && (
-          <motion.img
-            src={imagePreview}
-            alt="Uploaded"
-            className="mt-3 img-fluid rounded shadow"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          />
+          <motion.img src={imagePreview} alt="Uploaded" className="mt-3 img-fluid rounded shadow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} />
         )}
 
         <button onClick={handleSubmit} className="btn btn-success w-100 mt-3">
@@ -72,12 +57,7 @@ function App() {
       </motion.div>
 
       {predictions && predictions.length > 0 && (
-        <motion.div
-          className="mt-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <motion.div className="mt-4" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
           <div className="card shadow-lg p-4 mb-3">
             <h2 className="text-success">{predictions[0].plant_name}</h2>
             <p className="text-muted"><i>{predictions[0].scientific_name}</i></p>
@@ -113,6 +93,19 @@ function App() {
             </div>
           </div>
 
+          {predictions[0].locations && predictions[0].locations.length > 0 && (
+            <motion.div className="card shadow-lg p-4 mb-3" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+              <h4 className="text-primary">Commonly Found in These States 🌍</h4>
+              
+              {/* ✅ Replace MapContainer with PlantMap component */}
+              <PlantMap locations={predictions[0].locations} />  
+
+              <p className="mt-3 text-secondary">
+                This plant is commonly found in: <b>{predictions[0].locations.map(loc => loc.state).join(", ")}</b>.
+              </p>
+            </motion.div>
+          )}
+
           {predictions.length > 1 && (
             <div className="card shadow-lg p-3">
               <h4 className="text-secondary">Alternative Predictions:</h4>
@@ -128,12 +121,7 @@ function App() {
         </motion.div>
       )}
 
-      <motion.button
-        className="btn btn-outline-primary mt-4"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => (window.location.href = "/")}
-      >
+      <motion.button className="btn btn-outline-primary mt-4" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => (window.location.href = "/")}>
         Back to Home
       </motion.button>
     </div>
