@@ -1,40 +1,230 @@
 {
-    "Aloevera": {
-      "scientific_name": "Aloe barbadensis miller",
-      "medicinal_uses": ["Heals wounds", "Reduces inflammation", "Moisturizes skin"],
-      "benefits": ["Boosts immunity", "Improves digestion"],
-      "precautions": ["Avoid during pregnancy", "Excessive use may cause diarrhea"]
-    },
-
-    "Amla": {
-    "scientific_name": "Phyllanthus emblica",
-    "medicinal_uses": [
-      "Rich source of Vitamin C, enhancing immune function",
-      "Aids in digestion and alleviates constipation",
-      "Promotes hair health and reduces hair fall"
-    ],
-    "benefits": [
-      "Improves metabolic activity",
-      "Supports heart health by managing cholesterol levels",
-      "Possesses anti-aging properties due to its antioxidant content"
-    ],
-    "precautions": [
-      "May lower blood sugar levels; diabetics should monitor accordingly",
-      "Excessive consumption might lead to acidity in sensitive individuals"
-    ]
+  "Aloevera": {
+    "scientific_name": "Aloe barbadensis miller",
+    "medicinal_uses": ["Heals wounds", "Soothes burns", "Aids digestion", "Boosts immunity"],
+    "benefits": ["Rich in antioxidants", "Improves skin health", "Supports hair growth", "Hydrates the body"],
+    "precautions": ["May cause allergic reactions", "Excess consumption can lead to diarrhea", "Not recommended during pregnancy"],
+    "locations": [
+  {"state": "Maharashtra", "lat": 19.7515, "lng": 75.7139},
+  {"state": "Karnataka", "lat": 15.3173, "lng": 75.7139},
+  {"state": "Kerala", "lat": 10.8505, "lng": 76.2711}
+]
   },
   
-    "Neem": {
-      "scientific_name": "Azadirachta indica",
-      "medicinal_uses": ["Treats skin disorders", "Boosts immunity", "Anti-bacterial"],
-      "benefits": ["Purifies blood", "Improves liver function"],
-      "precautions": ["May lower blood sugar too much", "Avoid during pregnancy"]
+  "Amla": {
+    "scientific_name": "Phyllanthus emblica",
+    "medicinal_uses": ["Boosts immunity", "Improves digestion", "Promotes hair growth", "Supports heart health"],
+    "benefits": ["Rich in vitamin C", "Has anti-aging properties", "Improves skin texture", "Enhances metabolism"],
+    "precautions": ["Excess consumption may cause acidity", "May lower blood sugar levels", "Avoid in case of hyperacidity"]
+  },
+  "Amruta_Balli": {
+    "scientific_name": "Tinospora cordifolia",
+    "medicinal_uses": ["Treats fever", "Boosts immunity", "Improves liver function", "Controls diabetes"],
+    "benefits": ["Anti-inflammatory properties", "Supports respiratory health", "Aids digestion", "Improves skin health"],
+    "precautions": ["Overuse may cause constipation", "Can lower blood sugar levels", "Avoid during pregnancy"]
+  },
+  "Arali": {
+    "scientific_name": "Nerium oleander",
+    "medicinal_uses": ["Used for heart conditions", "Treats skin diseases", "Helps in wound healing"],
+    "benefits": ["Contains cardiac glycosides", "Anti-inflammatory properties", "Used in Ayurvedic medicine"],
+    "precautions": ["Highly toxic if ingested", "Can cause severe poisoning", "Should be used under medical supervision"]
+  },
+  "Ashoka": {
+    "scientific_name": "Saraca asoca",
+    "medicinal_uses": ["Supports female reproductive health", "Reduces menstrual pain", "Boosts skin health"],
+    "benefits": ["Rich in antioxidants", "Improves blood circulation", "Supports heart health"],
+    "precautions": ["May lower blood sugar levels", "Not recommended for pregnant women", "Avoid excess consumption"]
+  },
+  "Ashwagandha": {
+    "scientific_name": "Withania somnifera",
+    "medicinal_uses": ["Reduces stress and anxiety", "Boosts energy", "Improves brain function"],
+    "benefits": ["Supports muscle growth", "Enhances immunity", "Improves sleep quality"],
+    "precautions": ["May cause drowsiness", "Avoid during pregnancy", "Can lower blood pressure"]
+  },
+  "Avacado": {
+    "scientific_name": "Persea americana",
+    "medicinal_uses": ["Improves heart health", "Enhances skin elasticity", "Aids digestion"],
+    "benefits": ["Rich in healthy fats", "Supports brain function", "Boosts metabolism"],
+    "precautions": ["May cause allergic reactions", "High in calories", "Avoid excessive consumption"]
+  },
+  "Bamboo": {
+    "scientific_name": "Bambusoideae",
+    "medicinal_uses": ["Supports bone health", "Aids digestion", "Boosts immunity"],
+    "benefits": ["Rich in fiber", "Contains antioxidants", "Improves respiratory health"],
+    "precautions": ["Raw shoots may be toxic", "Avoid excessive intake", "Can cause bloating"]
+  },
+  "Basale": {
+    "scientific_name": "Basella alba",
+    "medicinal_uses": ["Treats anemia", "Improves digestion", "Enhances skin health"],
+    "benefits": ["Rich in iron", "Promotes hair growth", "Boosts metabolism"],
+    "precautions": ["May cause stomach upset if eaten raw", "Excess consumption may cause bloating"]
+  },
+  "Betel": {
+    "scientific_name": "Piper betle",
+    "medicinal_uses": ["Improves oral health", "Aids digestion", "Boosts metabolism"],
+    "benefits": ["Anti-inflammatory", "Enhances respiratory function", "Promotes gut health"],
+    "precautions": ["Chewing with tobacco is harmful", "Can stain teeth", "Avoid excessive consumption"]
+  },
+  "Neem": {
+    "scientific_name": "Azadirachta indica",
+    "medicinal_uses": ["Antibacterial", "Boosts immunity", "Treats skin diseases"],
+    "benefits": ["Purifies blood", "Strengthens teeth", "Fights infections"],
+    "precautions": ["Excess use may cause liver issues", "Avoid during pregnancy"]
+  },
+  "Tulasi": {
+    "scientific_name": "Ocimum sanctum",
+    "medicinal_uses": ["Reduces stress", "Improves respiratory health", "Boosts immunity"],
+    "benefits": ["Rich in antioxidants", "Supports heart health", "Enhances digestion"],
+    "precautions": ["May lower blood sugar levels", "Avoid in large quantities"]
+  },
+  "Rose": {
+    "scientific_name": "Rosa indica",
+    "medicinal_uses": ["Treats sore throat", "Used in skincare", "Improves digestion"],
+    "benefits": ["Rich in vitamins", "Has a calming effect", "Supports hydration"],
+    "precautions": ["May cause allergic reactions"]
+  },
+  "Lemon": {
+    "scientific_name": "Citrus limon",
+    "medicinal_uses": ["Boosts immunity", "Aids digestion", "Supports skin health"],
+    "benefits": ["Rich in vitamin C", "Improves hydration", "Detoxifies the body"],
+    "precautions": ["May cause acidity", "Excessive use can erode tooth enamel"]
+  },
+  "Mint": {
+    "scientific_name": "Mentha",
+    "medicinal_uses": ["Relieves indigestion", "Reduces nausea", "Boosts respiratory health"],
+    "benefits": ["Cooling effect", "Aids in digestion", "Supports oral health"],
+    "precautions": ["May cause acid reflux in some people", "Avoid excessive use"]
+  },
+  "Pomegranate": {
+    "scientific_name": "Punica granatum",
+    "medicinal_uses": ["Boosts heart health", "Improves digestion", "Supports skin health"],
+    "benefits": ["Rich in antioxidants", "Enhances immunity", "Supports blood circulation"],
+    "precautions": ["May interact with certain medications", "Avoid excessive consumption"]
+  },
+    "Pepper": {
+      "scientific_name": "Piper nigrum",
+      "medicinal_uses": ["Improves digestion", "Boosts metabolism", "Relieves cold and cough"],
+      "benefits": ["Rich in antioxidants", "Enhances nutrient absorption", "Has anti-inflammatory properties"],
+      "precautions": ["Excessive consumption may cause gastric irritation", "Avoid in case of stomach ulcers"]
     },
-    "Tulasi": {
-      "scientific_name": "Ocimum sanctum",
-      "medicinal_uses": ["Reduces stress", "Boosts respiratory health"],
-      "benefits": ["Supports immune function", "Good for digestion"],
-      "precautions": ["May interact with blood-thinning medications", "Excess use may lower blood sugar"]
+    "Jasmine": {
+      "scientific_name": "Jasminum officinale",
+      "medicinal_uses": ["Reduces stress and anxiety", "Improves sleep", "Used in skincare"],
+      "benefits": ["Has a calming aroma", "Boosts immunity", "Promotes hair health"],
+      "precautions": ["May cause allergic reactions", "Avoid excessive consumption"]
+    },
+    "Hibiscus": {
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "medicinal_uses": ["Lowers blood pressure", "Supports liver health", "Improves digestion"],
+      "benefits": ["Rich in vitamin C", "Promotes hair growth", "Aids weight management"],
+      "precautions": ["May lower blood sugar levels", "Avoid during pregnancy"]
+    },
+    "Curry_Leaf": {
+      "scientific_name": "Murraya koenigii",
+      "medicinal_uses": ["Controls diabetes", "Improves digestion", "Boosts hair health"],
+      "benefits": ["Rich in antioxidants", "Supports heart health", "Enhances liver function"],
+      "precautions": ["Excessive consumption may cause stomach upset"]
+    },
+    "Betel_Nut": {
+      "scientific_name": "Areca catechu",
+      "medicinal_uses": ["Stimulates digestion", "Enhances energy levels", "Used in Ayurvedic medicine"],
+      "benefits": ["Contains antioxidants", "Improves oral health", "Aids in weight management"],
+      "precautions": ["Excessive chewing may lead to addiction", "Linked to oral cancer"]
+    },
+    "Ganike": {
+      "scientific_name": "Celosia argentea",
+      "medicinal_uses": ["Used for eye disorders", "Supports liver health", "Aids digestion"],
+      "benefits": ["Rich in vitamins", "Promotes wound healing", "Improves skin health"],
+      "precautions": ["Not much known, avoid excessive consumption"]
+    },
+    "Nooni": {
+      "scientific_name": "Morinda citrifolia",
+      "medicinal_uses": ["Boosts immunity", "Reduces inflammation", "Improves digestion"],
+      "benefits": ["Rich in antioxidants", "Supports heart health", "Enhances skin health"],
+      "precautions": ["May interact with medications", "Avoid during pregnancy"]
+    },
+    "Avocado": {
+      "scientific_name": "Persea americana",
+      "medicinal_uses": ["Improves heart health", "Supports digestion", "Enhances brain function"],
+      "benefits": ["Rich in healthy fats", "Promotes skin health", "Aids weight management"],
+      "precautions": ["High in calories", "May cause allergies in some individuals"]
+    },
+    "Doddapatre": {
+      "scientific_name": "Plectranthus amboinicus",
+      "medicinal_uses": ["Treats respiratory infections", "Relieves indigestion", "Boosts immunity"],
+      "benefits": ["Has anti-inflammatory properties", "Supports lung health", "Enhances digestion"],
+      "precautions": ["Avoid excessive use", "May cause throat irritation in some cases"]
+    },
+    "Nagadali": {
+      "scientific_name": "Vitex negundo",
+      "medicinal_uses": ["Treats respiratory ailments", "Reduces inflammation", "Relieves joint pain"],
+      "benefits": ["Used in Ayurvedic medicine", "Boosts immunity", "Supports nervous system"],
+      "precautions": ["Avoid high doses", "Consult a doctor before use"]
+    },
+    "Raktachandini": {
+      "scientific_name": "Pterocarpus santalinus",
+      "medicinal_uses": ["Used in skincare", "Boosts liver health", "Supports heart health"],
+      "benefits": ["Has anti-aging properties", "Detoxifies the blood", "Reduces skin inflammation"],
+      "precautions": ["May cause allergic reactions", "Avoid excessive use"]
+    },
+    "Brahmi": {
+      "scientific_name": "Bacopa monnieri",
+      "medicinal_uses": ["Improves brain function", "Reduces stress", "Supports nervous system"],
+      "benefits": ["Enhances memory", "Reduces anxiety", "Supports mental clarity"],
+      "precautions": ["May cause digestive issues", "Avoid during pregnancy"]
+    },
+    "Pappaya": {
+      "scientific_name": "Carica papaya",
+      "medicinal_uses": ["Aids digestion", "Boosts skin health", "Supports heart health"],
+      "benefits": ["Rich in fiber", "Improves eye health", "Enhances immunity"],
+      "precautions": ["Unripe papaya is not recommended during pregnancy", "May cause allergic reactions"]
+    },
+    "Geranium": {
+      "scientific_name": "Pelargonium graveolens",
+      "medicinal_uses": ["Reduces stress", "Used in aromatherapy", "Supports skin health"],
+      "benefits": ["Has calming properties", "Improves mood", "Boosts circulation"],
+      "precautions": ["May cause skin irritation", "Avoid during pregnancy"]
+    },
+    "Insulin": {
+      "scientific_name": "Costus igneus",
+      "medicinal_uses": ["Controls diabetes", "Improves digestion", "Boosts immunity"],
+      "benefits": ["Reduces blood sugar levels", "Supports kidney function", "Aids weight management"],
+      "precautions": ["May cause low blood sugar", "Avoid excessive use"]
+    },
+    "Honge": {
+      "scientific_name": "Pongamia pinnata",
+      "medicinal_uses": ["Treats skin diseases", "Used in wound healing", "Supports liver health"],
+      "benefits": ["Rich in bioactive compounds", "Supports respiratory health", "Has antifungal properties"],
+      "precautions": ["Avoid excessive internal consumption", "May cause skin irritation"]
+    },
+    "Sapota": {
+      "scientific_name": "Manilkara zapota",
+      "medicinal_uses": ["Improves digestion", "Boosts immunity", "Supports skin health"],
+      "benefits": ["Rich in fiber", "Enhances metabolism", "Promotes hair growth"],
+      "precautions": ["May cause allergic reactions", "Avoid excessive consumption"]
+    },
+    "Ekka": {
+      "scientific_name": "Calotropis gigantea",
+      "medicinal_uses": ["Used for joint pain", "Treats skin infections", "Supports wound healing"],
+      "benefits": ["Has anti-inflammatory properties", "Rich in bioactive compounds", "Supports respiratory health"],
+      "precautions": ["Toxic if consumed in large amounts", "Can cause skin irritation"]
+    },
+    "Wood_sorel": {
+      "scientific_name": "Oxalis corniculata",
+      "medicinal_uses": ["Supports liver function", "Aids digestion", "Boosts immunity"],
+      "benefits": ["Rich in vitamins", "Contains antioxidants", "Improves metabolism"],
+      "precautions": ["Avoid in case of kidney stones", "May cause acidity if taken in excess"]
+    },
+    "Lemon_grass": {
+      "scientific_name": "Cymbopogon citratus",
+      "medicinal_uses": ["Reduces stress", "Supports digestion", "Boosts immunity"],
+      "benefits": ["Has antimicrobial properties", "Enhances metabolism", "Promotes relaxation"],
+      "precautions": ["May cause allergic reactions", "Avoid excessive consumption"]
+    },
+    "Mango": {
+      "scientific_name": "Mangifera indica",
+      "medicinal_uses": ["Boosts immunity", "Supports heart health", "Improves digestion"],
+      "benefits": ["Rich in vitamins", "Enhances skin health", "Aids weight management"],
+      "precautions": ["May cause allergies in some individuals", "Avoid excessive consumption"]
     }
-  }
-  
+}
