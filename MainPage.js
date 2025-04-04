@@ -1,115 +1,84 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import styles from "./MainPage.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./styles/MainPage.module.css"; // Custom CSS
 
 function MainPage() {
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.heroContainer}>
+      <div className={styles.overlay}></div>
+
       {/* Hero Section */}
-      <div className={styles.hero}>
-        <motion.h1
-          className={styles.heroTitle}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Medicinal Plant Identifier 🌿
-        </motion.h1>
-        <motion.p
-          className={styles.heroSubtitle}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          Discover the power of nature with AI-based plant identification.
-        </motion.p>
-        <motion.button
-          className="btn btn-success btn-lg"
-          onClick={() => (window.location.href = "/predict")}
-          whileHover={{ scale: 1.1 }}
-        >
-          🌱 Identify a Plant
-        </motion.button>
-      </div>
+      <motion.div
+        className={styles.heroContent}
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className={styles.heroTitle}>Explore the Healing World of Medicinal Plants 🌿</h1>
+        <p className={styles.heroSubtitle}>
+          Learn how to use these natural treasures for your well-being.
+        </p>
 
-      {/* About Section */}
-      <div className={`container ${styles.contentSection}`}>
-        <motion.div
-          className="card shadow-lg p-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-secondary">🌿 About the Project</h2>
-          <p>
-            Our AI-powered tool helps you identify medicinal plants with just an image. 
-            Learn about their **scientific names, benefits, medicinal uses, and precautions.**
-          </p>
-          <p>
-            🌱 Built using **Machine Learning (MobileNet), Flask API, and React**, 
-            this project aims to promote awareness about nature's healing power.
-          </p>
-        </motion.div>
-      </div>
+        {/* Search Bar */}
+        <div className={styles.searchBar}>
+          <input type="text" placeholder="Search for a plant..." className={styles.searchInput} />
+          <button className={styles.searchButton}>Search</button>
+        </div>
 
-      {/* Features Section */}
-      <div className={`container ${styles.contentSection}`}>
-        <motion.div
-          className="card shadow-lg p-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-primary">✨ Features</h2>
-          <ul className="list-group">
-            <li className="list-group-item">🔍 Identify plants using AI</li>
-            <li className="list-group-item">📚 Get detailed information</li>
-            <li className="list-group-item">⚕️ Learn about medicinal uses</li>
-            <li className="list-group-item">🚀 User-friendly interface</li>
-          </ul>
-        </motion.div>
-      </div>
+        {/* Navigation Buttons */}
+        <div className={styles.buttonGroup}>
+          <motion.button
+            className="btn btn-primary btn-lg m-2"
+            onClick={() => navigate("/predict")}
+            whileHover={{ scale: 1.1 }}
+          >
+            🌱 Identify Plant
+          </motion.button>
+          <motion.button
+            className="btn btn-secondary btn-lg m-2"
+            onClick={() => navigate("/about")}
+            whileHover={{ scale: 1.1 }}
+          >
+            ℹ️ About Us
+          </motion.button>
+          <motion.button
+            className="btn btn-success btn-lg m-2"
+            onClick={() => navigate("/contact")}
+            whileHover={{ scale: 1.1 }}
+          >
+            📞 Contact Us
+          </motion.button>
+        </div>
 
-      {/* Contact Section */}
-      <div className={`container ${styles.contentSection}`}>
-        <motion.div
-          className="card shadow-lg p-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-secondary">📩 Contact Us</h2>
-          <p>Email: <strong>support@plantidentifier.com</strong></p>
-          <p>Follow us on social media for updates!</p>
-        </motion.div>
-      </div>
-      {/* How It Works Section */}
-<div className={`container ${styles.contentSection}`}>
-  <motion.div
-    className="card shadow-lg p-4"
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5 }}
-  >
-    <h2 className="text-primary">🛠 How It Works</h2>
-    <div className="row">
-      <div className="col-md-4">
-        <h4>📷 Step 1: Upload Image</h4>
-        <p>Select an image of the plant you want to identify.</p>
-      </div>
-      <div className="col-md-4">
-        <h4>🧠 Step 2: AI Analysis</h4>
-        <p>Our AI model analyzes the image to identify the plant.</p>
-      </div>
-      <div className="col-md-4">
-        <h4>📋 Step 3: Get Information</h4>
-        <p>See details about its benefits, medicinal uses, and precautions.</p>
-      </div>
-    </div>
-  </motion.div>
+        {/* Plant Cards Section */}
+        <div className={styles.plantGrid}>
+  <div className={styles.plantCard}>
+    <img src="/assets/Rosemary.jpg" alt="Rosemary" className={styles.plantImage} />
+    <h3>Rosemary</h3>
+    <p>Boosts memory & reduces stress.</p>
+  </div>
+  <div className={styles.plantCard}>
+    <img src="/assets/Pepermint.jpg" alt="Peppermint" className={styles.plantImage} />
+    <h3>Peppermint</h3>
+    <p>Soothes digestion & relieves headaches.</p>
+  </div>
+  <div className={styles.plantCard}>
+    <img src="/assets/EveningPrimrose.jpg" alt="Evening Primrose" className={styles.plantImage} />
+    <h3>Evening Primrose</h3>
+    <p>Supports skin health & hormonal balance.</p>
+  </div>
+  <div className={styles.plantCard}>
+    <img src="/assets/Ginkgo.webp" alt="Ginkgo" className={styles.plantImage} />
+    <h3>Ginkgo</h3>
+    <p>Improves focus & circulation.</p>
+  </div>
 </div>
 
+      </motion.div>
     </div>
   );
 }
